@@ -7,7 +7,7 @@ Summary(pt_BR):	Descompressão "On-the-fly" de arquivos HTML para o Apache
 Name:		apache1-mod_%{mod_name}
 Version:	1
 Release:	1
-License:	GPL
+License:	GPL v2
 Group:		Networking/Daemons
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
 # Source0-md5:	9f549047abccccf6570333bb0313d2cd
@@ -64,4 +64,5 @@ fi
 
 %files
 %defattr(644,root,root,755)
+%doc README
 %attr(755,root,root) %{_pkglibdir}/*
