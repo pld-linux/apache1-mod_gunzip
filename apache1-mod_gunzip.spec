@@ -3,7 +3,7 @@ Summary:	Apache module: On-the-fly decompression of HTML documents
 Summary(pl):	Modu³ do apache: dekompresuje dokumenty HTML w locie
 Name:		apache-mod_%{mod_name}
 Version:	1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Networking/Daemons
 Group(pl):	Sieciowe/Serwery
