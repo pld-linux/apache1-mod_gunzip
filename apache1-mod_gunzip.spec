@@ -6,6 +6,7 @@ Version:	1
 Release:	2
 License:	GPL
 Group:		Networking/Daemons
+Group(de):	Netzwerkwesen/Server
 Group(pl):	Sieciowe/Serwery
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
 BuildRequires:	/usr/sbin/apxs
@@ -31,12 +32,9 @@ Modu³ do apache: dekompresuje dokumenty HTML w locie.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT%{_pkglibdir}
 
 install mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}
-
-strip --strip-unneeded $RPM_BUILD_ROOT%{_pkglibdir}/* 
 
 %post
 %{_sbindir}/apxs -e -a -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
