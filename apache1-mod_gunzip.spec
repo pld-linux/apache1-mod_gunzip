@@ -13,7 +13,7 @@ BuildRequires:	apache-devel
 BuildRequires:	zlib-devel
 Prereq:		/usr/sbin/apxs
 Requires:	apache
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(/usr/sbin/apxs -q LIBEXECDIR)
 
@@ -31,7 +31,6 @@ Modu³ do apache: dekompresuje dokumenty HTML w locie.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 
 install -d $RPM_BUILD_ROOT%{_pkglibdir}
 
