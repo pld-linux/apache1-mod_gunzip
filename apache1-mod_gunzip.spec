@@ -4,10 +4,10 @@ Summary(pl):	Modu³ do apache: dekompresuje dokumenty HTML w locie
 Name:		apache-mod_%{mod_name}
 Version:	1
 Release:	0.1
+Copyright:	GPL
 Group:		Networking/Daemons
 Group(pl):	Sieciowe/Serwery
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
-Copyright:	GPL
 BuildRequires:	/usr/sbin/apxs
 BuildRequires:	apache-devel
 BuildRequires:	zlib-devel
@@ -35,7 +35,7 @@ rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_pkglibdir}
 
-install -m755 mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}
+install mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}
 
 strip --strip-unneeded $RPM_BUILD_ROOT%{_pkglibdir}/* 
 
