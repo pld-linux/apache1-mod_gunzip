@@ -3,13 +3,13 @@ Summary:	Apache module: On-the-fly decompression of HTML documents
 Summary(pl):	Modu³ do apache: dekompresuje dokumenty HTML w locie
 Name:		apache-mod_%{mod_name}
 Version:	1
-Release:	0.1
-Copyright:	GPL
+Release:	1
+License:	GPL
 Group:		Networking/Daemons
 Group(pl):	Sieciowe/Serwery
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
 BuildRequires:	/usr/sbin/apxs
-BuildRequires:	apache-devel
+BuildRequires:	apache(EAPI)-devel
 BuildRequires:	zlib-devel
 Prereq:		/usr/sbin/apxs
 Requires:	apache
@@ -27,7 +27,7 @@ Modu³ do apache: dekompresuje dokumenty HTML w locie.
 %setup -q -n mod_%{mod_name}
 
 %build
-/usr/sbin/apxs -c mod_%{mod_name}.c -o mod_%{mod_name}.so -lz
+%{_sbindir}/apxs -c mod_%{mod_name}.c -o mod_%{mod_name}.so -lz
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -39,9 +39,9 @@ install mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}
 strip --strip-unneeded $RPM_BUILD_ROOT%{_pkglibdir}/* 
 
 %post
-/usr/sbin/apxs -e -a -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
+%{_sbindir}/apxs -e -a -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
 if [ -f /var/lock/subsys/httpd ]; then
-	/etc/rc.d/init.d/httpd restart 1>&2
+	%{_sysconfdir}/rc.d/init.d/httpd restart 1>&2
 fi
 
 %preun
