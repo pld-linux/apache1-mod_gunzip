@@ -6,7 +6,7 @@ Summary(pl):	Modu³ do apache: dekompresuje dokumenty HTML w locie
 Summary(pt_BR):	Descompressão "On-the-fly" de arquivos HTML para o Apache
 Name:		apache-mod_%{mod_name}
 Version:	1
-Release:	3
+Release:	4
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
