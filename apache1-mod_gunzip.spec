@@ -1,6 +1,8 @@
 %define		mod_name	gunzip
 Summary:	Apache module: On-the-fly decompression of HTML documents
+Summary(es):	Descompresión instantanea de archivos HTML para Apache
 Summary(pl):	Modu³ do apache: dekompresuje dokumenty HTML w locie
+Summary(pt_BR):	Descompressão "On-the-fly" de arquivos HTML para o Apache
 Name:		apache-mod_%{mod_name}
 Version:	1
 Release:	2
@@ -21,8 +23,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Apache module: On-the-fly decompression of HTML documents.
 
+%description -l es
+Descompresión instantanea de archivos HTML para Apache.
+
 %description -l pl
 Modu³ do apache: dekompresuje dokumenty HTML w locie.
+
+%description -l pt_BR
+Descompressão "On-the-fly" de arquivos HTML para o Apache.
 
 %prep 
 %setup -q -n mod_%{mod_name}
