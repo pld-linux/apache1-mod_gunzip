@@ -10,6 +10,7 @@ Release:	4
 License:	GPL
 Group:		Networking/Daemons
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
+# Source0-md5:	9f549047abccccf6570333bb0313d2cd
 BuildRequires:	%{apxs}
 BuildRequires:	apache(EAPI)-devel
 BuildRequires:	zlib-devel
