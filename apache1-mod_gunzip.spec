@@ -27,7 +27,7 @@ Modu³ do apache: dekompresuje dokumenty HTML w locie.
 %setup -q -n mod_%{mod_name}
 
 %build
-%{_sbindir}/apxs -c mod_%{mod_name}.c -o mod_%{mod_name}.so -lz
+/usr/sbin/apxs -c mod_%{mod_name}.c -o mod_%{mod_name}.so -lz
 
 %install
 rm -rf $RPM_BUILD_ROOT
