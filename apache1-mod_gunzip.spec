@@ -12,7 +12,7 @@ BuildRequires:	/usr/sbin/apxs
 BuildRequires:	apache(EAPI)-devel
 BuildRequires:	zlib-devel
 Prereq:		/usr/sbin/apxs
-Requires:	apache
+Requires:	apache(EAPI)
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_pkglibdir	%(/usr/sbin/apxs -q LIBEXECDIR)
