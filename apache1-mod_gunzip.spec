@@ -31,7 +31,7 @@ Modu³ do apache: dekompresuje dokumenty HTML w locie.
 %description -l pt_BR
 Descompressão "On-the-fly" de arquivos HTML para o Apache.
 
-%prep 
+%prep
 %setup -q -n mod_%{mod_name}
 
 %build
