@@ -46,7 +46,7 @@ install mod_%{mod_name}.so $RPM_BUILD_ROOT%{_pkglibdir}
 %post
 %{apxs} -e -a -n %{mod_name} %{_pkglibdir}/mod_%{mod_name}.so 1>&2
 if [ -f /var/lock/subsys/httpd ]; then
-	%{_sysconfdir}/rc.d/init.d/httpd restart 1>&2
+	/etc/rc.d/init.d/httpd restart 1>&2
 fi
 
 %preun
