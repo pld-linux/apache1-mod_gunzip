@@ -6,7 +6,7 @@ Summary(pl):	Modu³ do apache: dekompresuje dokumenty HTML w locie
 Summary(pt_BR):	Descompressão "On-the-fly" de arquivos HTML para o Apache
 Name:		apache1-mod_%{mod_name}
 Version:	1
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Networking/Daemons
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
@@ -16,7 +16,7 @@ BuildRequires:	apache1-devel >= 1.3.33-2
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	zlib-devel
 Requires(triggerpostun):	%{apxs}
-Requires:	apache1 >= 1.3.33-2
+Requires:	apache1(EAPI)
 Obsoletes:	apache-mod_gunzip <= 1
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
