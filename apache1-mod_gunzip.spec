@@ -1,9 +1,9 @@
 %define		mod_name	gunzip
 %define 	apxs		/usr/sbin/apxs1
 Summary:	Apache module: On-the-fly decompression of HTML documents
-Summary(es):	DescompresiÛn instantanea de archivos HTML para Apache
-Summary(pl):	Modu≥ do apache: dekompresuje dokumenty HTML w locie
-Summary(pt_BR):	Descompress„o "On-the-fly" de arquivos HTML para o Apache
+Summary(es.UTF-8):   Descompresi√≥n instantanea de archivos HTML para Apache
+Summary(pl.UTF-8):   Modu≈Ç do apache: dekompresuje dokumenty HTML w locie
+Summary(pt_BR.UTF-8):   Descompress√£o "On-the-fly" de arquivos HTML para o Apache
 Name:		apache1-mod_%{mod_name}
 Version:	1
 Release:	3
@@ -26,14 +26,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Apache module: On-the-fly decompression of HTML documents.
 
-%description -l es
-DescompresiÛn instantanea de archivos HTML para Apache.
+%description -l es.UTF-8
+Descompresi√≥n instantanea de archivos HTML para Apache.
 
-%description -l pl
-Modu≥ do apache: dekompresuje dokumenty HTML w locie.
+%description -l pl.UTF-8
+Modu≈Ç do apache: dekompresuje dokumenty HTML w locie.
 
-%description -l pt_BR
-Descompress„o "On-the-fly" de arquivos HTML para o Apache.
+%description -l pt_BR.UTF-8
+Descompress√£o "On-the-fly" de arquivos HTML para o Apache.
 
 %prep
 %setup -q -n mod_%{mod_name}
