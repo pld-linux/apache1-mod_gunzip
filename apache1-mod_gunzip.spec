@@ -11,7 +11,7 @@ License:	GPL v2
 Group:		Networking/Daemons
 Source0:	http://sep.hamburg.com/mod_%{mod_name}.tar.gz
 # Source0-md5:	9f549047abccccf6570333bb0313d2cd
-BuildRequires:	%{apxs}
+BuildRequires:	apache1-apxs
 BuildRequires:	apache1-devel >= 1.3.33-2
 BuildRequires:	rpmbuild(macros) >= 1.268
 BuildRequires:	zlib-devel
